@@ -1,8 +1,8 @@
 {
-    "name": "TestEventService.Runtime",
+    "name": "TestEventService.Editor",
     "rootNamespace": "",
     "references": [
-        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+        "GUID:32ba2c8082b2f9b408b50e8ef9badf4b"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
