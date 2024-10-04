@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using TestEventService.Extensions;
 using TestEventService.Services;
 using UnityEngine;
 
@@ -13,6 +15,16 @@ namespace TestEventService
         private void Awake()
         {
             gameObject.GetComponentsInChildren(_services);
+        }
+
+        private void Start()
+        {
+            _services.Initialize();
+        }
+
+        private void OnDestroy()
+        {
+            _services.Release();
         }
 
         #endregion
