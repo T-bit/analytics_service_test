@@ -1,13 +1,11 @@
-﻿using TestEventService.Attributes;
+﻿using System.Collections.Generic;
 using TestEventService.Services;
 using UnityEngine;
 
 namespace TestEventService
 {
-    public sealed class Game : MonoSingleton<Game>
+    public sealed class Game : MonoBehaviour
     {
-        [SerializeReference]
-        [Polymorphic]
-        private IService[] _services = new IService[0];
+        private readonly List<IService> _services = new();
     }
 }

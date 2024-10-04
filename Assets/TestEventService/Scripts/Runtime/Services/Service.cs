@@ -1,9 +1,9 @@
-﻿using System;
+﻿using UnityEngine;
 
 namespace TestEventService.Services
 {
-    [Serializable]
-    public abstract class Service : IService
+    [DisallowMultipleComponent]
+    public abstract class Service : MonoBehaviour, IService
     {
     }
 }
