@@ -44,8 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c89a397bc10ab74cb927753ce273a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _serverUrl: http://127.0.0.1/
+  _serverUrl: https://httpbin.org/anything
   _cooldownBeforeSend: 1
+  _cooldownBeforeSave: 5
+  _sendEventLimit: 20
+  _saveEventLimit: 1024
+  _logResponse: 1
 --- !u!1 &5622765446382174801
 GameObject:
   m_ObjectHideFlags: 0

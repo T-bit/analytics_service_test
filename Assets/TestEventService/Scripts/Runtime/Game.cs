@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TestEventService.Extensions;
 using TestEventService.Services;
 using UnityEngine;
@@ -10,6 +9,17 @@ namespace TestEventService
     {
         private readonly List<IService> _services = new();
 
+        private void Initialize()
+        {
+            _services.Initialize();
+        }
+
+        private void Release()
+        {
+            _services.Release();
+            _services.Clear();
+        }
+
         #region Unity
 
         private void Awake()
@@ -19,12 +29,17 @@ namespace TestEventService
 
         private void Start()
         {
-            _services.Initialize();
+            Initialize();
         }
 
         private void OnDestroy()
         {
-            _services.Release();
+            Release();
+        }
+
+        private void OnApplicationQuit()
+        {
+            Release();
         }
 
         #endregion

@@ -22,7 +22,6 @@ namespace TestEventService.Utilities
         }
 
         public static string Serialize<T>(T value, bool prettyPrint)
-            where T : class
         {
             var formatting = prettyPrint
                 ? Formatting.Indented

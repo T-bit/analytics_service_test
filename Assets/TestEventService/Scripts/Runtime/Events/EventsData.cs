@@ -3,9 +3,9 @@ using Newtonsoft.Json;
 
 namespace TestEventService.Events
 {
-    public sealed class EventsData
+    public struct EventsData
     {
         [JsonProperty("events")]
-        public List<Event> Events = new();
+        public List<Event> Events;
     }
 }

@@ -74,7 +74,7 @@ namespace TestEventService.Utilities
                 try
                 {
                     json = File.ReadAllText(path);
-                    JObject.Parse(json);
+                    JToken.Parse(json);
 
                     return true;
                 }

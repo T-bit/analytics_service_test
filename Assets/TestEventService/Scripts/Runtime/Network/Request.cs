@@ -121,7 +121,7 @@ namespace TestEventService.Network
 
             var downloadHandler = request.downloadHandler;
 
-            return new Response(downloadHandler.data);
+            return new Response(request.responseCode, downloadHandler.data);
         }
     }
 }

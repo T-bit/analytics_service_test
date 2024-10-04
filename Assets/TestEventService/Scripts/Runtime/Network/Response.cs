@@ -6,8 +6,11 @@ namespace TestEventService.Network
     {
         private readonly byte[] _bytes;
 
-        public Response(byte[] bytes)
+        public readonly long ResponseCode;
+
+        public Response(long responseCode, byte[] bytes)
         {
+            ResponseCode = responseCode;
             _bytes = bytes;
         }
 
